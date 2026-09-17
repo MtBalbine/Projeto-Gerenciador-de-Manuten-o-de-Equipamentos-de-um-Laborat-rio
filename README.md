@@ -1,0 +1,2 @@
+# Projeto-Gerenciador-de-Manuten-o-de-Equipamentos-de-um-Laborat-rio
+Sistema desenvolvido em linguagem C para administrar dinamicamente as solicitações de manutenção corretiva e preventiva de equipamentos de um Laboratório de Sistemas Embarcados e Automação. Este projeto foi desenvolvido como a primeira atividade avaliativa da disciplina de Estrutura de Dados (Prática) do curso de Engenharia de Computação.
