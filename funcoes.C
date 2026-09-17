@@ -49,6 +49,10 @@
         return aux;
     }
 
+    void InsereInicio(Lista* velho, int valor)
+    {
+        velho->inicio = AuxInsere(velho->inicio,valor);
+    }
 
 
 #endif // FUNCOES_H_INCLUDED
