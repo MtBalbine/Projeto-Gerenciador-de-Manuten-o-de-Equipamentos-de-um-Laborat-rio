@@ -23,8 +23,8 @@
 
         */
     int cod_s;
-    char cod_e[4];
-    char nome[20];
+    char cod_e[7];// uma casa a mais para "\0"
+    char nome[21];// uma casa a mais para "\0"
     int prio;
     int dias;
     struct dados *prox;
