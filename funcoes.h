@@ -64,7 +64,29 @@ Dados* CriaChamado(Dados* anterior, int soli, char cequi[], char nequi[], int pr
 
 void NovoChamado(Chamado *anterior)
 {
+     int cod;
+    printf("\n Codigo do chamado: ");
+    scanf("%d", &cod);
+    while(QuantCod(cod)!=4)
+    {
+        printf("\n Formato de codigo incorreto! Digite novamente o código;");
+        scanf("%d", &cod);
+    }
+    
 
+}
+
+
+int QuantCod(int v)
+{
+    int cont=0;
+
+    while(v>0)
+    {
+        v=v/10;
+        cont++;
+    }
+    return v;
 }
 
 #endif // FUNCOES_H_INCLUDED
