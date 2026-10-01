@@ -8,8 +8,9 @@
 
 */
     typedef struct dados
-    {
-        /*
+{
+
+     /*
         Codigo da solicitação: (int 4 caracteres)
 
         Código do Equipamento: (string 3 caracteres; 3 numeros)
@@ -19,48 +20,51 @@
         Prioridade: (int de 1 a 3)
 
         Período: (int)
-        
+
         */
+    int cod_s;
+    char cod_e[4];
+    char nome[20];
+    int prio;
+    int dias;
+    struct dados *prox;
+}Dados;
 
-    }Dados;
+typedef struct chamados
+{
+   No *Inicio;
+}Chamados;
 
-    typedef struct no
-    {
-        
-        Dados info; // dado 
-        struct no * prox;
-    }No;
+Chamado* InicializaListaChamado()
+{
+    return NULL;
+}
 
-    typedef struct lista
-    {
-        No *inicio;
-    }Lista;
+Chamados* ListaChamados()
+{
+    Chamados *aux;
+    aux=(Chamados*)malloc(sizeof(Chamados));
+    aux->inicio=NULL;
+    return aux;
+}
 
-    Lista* InicializaLista ()
-    {
-        return NULL;
-    }
+Dados* CriaChamado(Dados* anterior, int soli, char cequi[], char nequi[], int pri, int prazo)
+{
+    Dados* aux;
+    aux=(Dados*)malloc(sizeof(Dados));
+    //aux->cod_s=soli;
+    //aux->cod_e=cequi; corrigir leiura de vetores
+    aux->nome=nequi;
+    aux->prio=pri;
+    aux->dias=prazo;
 
-    Lista* CriaLista ()
-    {
-        Lista *aux;
-        aux = (Lista*) malloc(sizeof(Lista));
-        aux->inicio = NULL;
-        return aux;
-    }
+    aux->prox=anterior;
+    return aux;
+}
 
-    No * AuxInsere (No* antigo, int v)
-    {
-        No * novo;
-        novo = (No*)malloc(sizeof(No));
-        novo->info = v;
-        novo->prox = antigo;
-        return novo;
-    }
-    void InsereInicio(Lista* velho, int valor)
-    {
-        velho->inicio = AuxInsere(velho->inicio,valor);
-    }
+void NovoChamado(Chamado *anterior)
+{
 
+}
 
 #endif // FUNCOES_H_INCLUDED
