@@ -9,8 +9,12 @@ int main()
 
     int opcao = 0;
 
+    Chamados *lista = InicializaListaChamado(); // Inicializa a lista de chamados
+
     do
     {
+        system("cls"); // Limpa a tela
+
         printf("\n===== GERENCIADOR DE MANUTENCAO =====\n");
         printf("1 - Novo chamado\n");
         printf("2 - Listar chamados\n");
@@ -28,6 +32,7 @@ int main()
                 // Funcao da biblioteca: cadastrar novo chamado
                 // Cria um novo registro com codigo, equipamento, prioridade e prazo.
                 // Deve chamar a funcao de insercao na lista.
+                NovoChamado(lista);
                 break;
 
             case 2:
@@ -65,7 +70,7 @@ int main()
 
     } while (opcao != 0);
 
-    
+
     system("pause");
     return 0;
 }
